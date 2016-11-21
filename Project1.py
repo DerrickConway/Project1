@@ -7,6 +7,11 @@ app = Flask(__name__)
 def HomePage():
     return render_template("HomePage.html")
 
+@app.route("/post_user",methods=["POST"])
+def post_user():
+    return render_template("HomePage.html")
+
+
 
 if __name__ == '__main__':
     app.run()

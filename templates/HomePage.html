@@ -126,7 +126,7 @@
                  <p class="lead">Once you’ve completed the workout, take a short break and have a drink. <br>Then it’s time to go again. Do the whole circuit four times. Warm down with a brief jog on the spot, then stretch.</p>
 </div>
 
-            <form class="form-inline">
+          <!--   <form class="form-inline">
   <div class="form-group">
     <label for="exampleInputName2">Name</label>
     <input type="text" class="form-control" id="exampleInputName2" placeholder="name">
@@ -136,7 +136,19 @@
     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="email">
   </div>
   <button type="submit" class="btn btn-default">Send </button>
+</form>-->
+
+            <form method="post" action="/post_user">
+                <label>Username:</label>
+                <input id=username" name="username" type="text" />
+                 <label>Email:</label>
+                <input id=email" name="email" type="text" />
+                <input type="submit" />
+
 </form>
+
+
+
 
 
     </div><!-- /.modal-content -->
