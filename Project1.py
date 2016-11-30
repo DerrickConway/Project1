@@ -4,14 +4,15 @@ from flask import request, redirect, url_for
 from flask.ext.security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:declanconn1@localhost/flaskInfo'
-app.config['SECRET_KEY'] = 'super-secret'
-app.config['SECURITY_REGISTERABLE'] = True
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:declanconn1@localhost/flaskInfo' # this is for logging into and connecting to the database
+app.config['SECRET_KEY'] = 'super-secret' # this handles security provided by flask security
+app.config['SECURITY_REGISTERABLE'] = True # this the register form
 app.debug = True
 db = SQLAlchemy(app)
 
+# I got this code from Flask website for the database it was recommended to use for flask security. this is the website i got it from,http://pythonhosted.org//Flask-Security/quickstart.html#id1
 
-# Define models
+# Define models creating the database
 roles_users = db.Table('roles_users',
         db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
         db.Column('role_id', db.Integer(), db.ForeignKey('role.id')))
@@ -52,6 +53,8 @@ def post_user():
     db.session.add(user)
     db.session.commit()
     return redirect(url_for('HomePage'))
+
+
 
 
 if __name__ == '__main__':
