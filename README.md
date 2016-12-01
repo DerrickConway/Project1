@@ -18,10 +18,12 @@ Now to run the application in the command prompt enter “python Project1.py” 
 
 In this application the user must register to use this HIT Workout application, after you enter your email address and password once you register it will be saved to the database. This is the web address URL http://127.0.0.1:5000/register to register. After that the user is logged in, to check your login works just enter into the web address URL http://127.0.0.1:5000/logout then enter http://127.0.0.1:5000/login and it will ask you to enter your user email address and password. And for the home page http://127.0.0.1:5000 where all the information is for your three week work out plan From there it gives you the information for the 3 week plan you should try out. Images,About, and how to contact me but could not get the contact me working properly so I hade to take it out last min, You can check the database to make sure it saved correctly. To check database follow these steps. Click on the following pgAdmin4, PostgreSQL 9.6 enter your password continue on to Databases my password is declanconn1 for database password , FlaskInfo, Schemas, Public, Tables, and right click on user, View data and select first 100 rows and your data should be there of your email address and password.
 
-Problems with the project 
+Problems with the project
+
 Problems I encountered with the project is that when I register on the application it would give me a send error after I entered my details and would not send me back to the home page, I also had an error on contact form that I tried to design I could not get the data to send to my email database so at the last min I decided to delete it and leave it out.
 
 Research for project 
+
 I did a good bit of research for the project looking up tutorials on YouTube on how to connect database with a data base and and how to use bootstrap and what software to use in the end I decided to use Pycharm for my text and postgresql as my database as it was recommending in my research.
 Here is where I found most of my research that helped me put the application together that I found on YouTube and on websites for database, bootstrap and flask
 https://www.youtube.com/watch?v=PJK950Gp780
